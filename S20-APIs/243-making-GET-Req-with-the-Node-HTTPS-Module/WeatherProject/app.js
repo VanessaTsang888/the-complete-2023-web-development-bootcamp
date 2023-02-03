@@ -16,7 +16,7 @@ app.get("/", function (req, res) {
   const url =
     "https://api.openweathermap.org/data/2.5/weather?q=London&appid=e72ca729af228boabd5d20e3b7749713&units=metric";
   https.get(url, function (response) {
-    console.log(response);
+    console.log(response.statusCode);
   });
   res.send("Server is up and running.");
 });
