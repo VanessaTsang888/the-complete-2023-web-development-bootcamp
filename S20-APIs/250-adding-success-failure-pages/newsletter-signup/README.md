@@ -4,9 +4,26 @@
 
 An online training course on Udemy.
 
-This is focused on Section 20. APIs > developing a Newsletter Login Webpage with a backend using the Mailchimp API to make the web app dynamic.
+This is focused on Section 20. APIs > developing a Newsletter Signup website application with a backend using the Mailchimp API to make the web app dynamic.
 
-## The Tech Stack:
+## About
+
+By developing this newsletter signup website I have learnt the following:
+
+- API Endpoints, Paths and parameters.
+- API Authentication and Postman.
+- JSON formatted data.
+- Make GET Requests with the Node HTTPS Module.
+- How to parse JSON.
+- Use Express to Render a Website with Live API Data.
+- Use Body Parser to Parse POST Requests to the Server.
+- The Mailchimp API.
+- SeuUp the Signup Page.
+- Post Data to Mailchimp's Servers via their API.
+- Add Success and Failure Pages.
+- Deploy Server with Heroku.
+
+### The Tech Stack:
 
 1. Node.js: a language for server-side development.
 2. Express: a framework as it provides broad features for building web apps.
@@ -15,7 +32,7 @@ This is focused on Section 20. APIs > developing a Newsletter Login Webpage with
 5. Mailchimp developer API: unfortunately, my Mailchip account is down and I am getting this fixed. This is why currently you will only reach the Failed web page and not the Successful web page hence why you will see the error code of 401 - unauthorised in the terminal or command line. However, the code is correct.
 6. Heroku: a server to deploy our web app and make available to everyone on the World Wide Web. This is GoLive part of this project.
 
-### To run this web app
+### How To Run This Web App
 
 To run this web app locally follow the below instructions;
 
@@ -33,4 +50,3 @@ You may wish to use Chrome Dev Tools to test this web app in the UI. From doing 
 #### Next Up
 
 When I get time I hope to do a couple of Quick Wins of this Node.js project and apply validate on the form to restrict certain characters being submitted by users - for cyber security reasons.
-s
