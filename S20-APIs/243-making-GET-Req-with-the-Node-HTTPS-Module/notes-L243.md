@@ -58,4 +58,6 @@ process.stdout.write(d);
 });
 ```
 
-My GET Req gave me 401 error code and msg of: Unauthorized but I don't know why? I'm going to push my code to my GitHub then post the question on the Q&A of this course.
+My GET Req gave me 200 code as I've fixed my error code 400 by generating my own API from the Open Weather Map website. Then I tested that using Postman which passed.
+
+
