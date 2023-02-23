@@ -1,3 +1,7 @@
 # 245 Using Express to Render a Website with Live API Data
 
-Duration 2:10 > printout on screen not working as I'm getting error msg in Console tab of: non-JS module files deprecated.
+Duration 2:30:
+I have used template literal to printout some plain text with the temp data and the weather description data. See my screen shot.
+
+
+
