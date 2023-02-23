@@ -25,9 +25,14 @@ app.get("/", function (req, res) {
         const temp = weatherData.main.temp
         // Get the piece of data we want
         const weatherDescription = weatherData.weather[0].description;
-        // Using template literal to printout the plain text with dynamic data on to the screen.
-          res.write(`<h1>The tempature in Lodnon is ${temp} degrees Celcious,</h1>
-          <p>The weather is currently ${weatherDescription}</p>`);
+        const icon = weatherData.weather[0].icon;
+        // String concatination to add the icon variable.
+        const imageURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
+        // Using template literal to printout the plain text with dynamic data on to the screen. Send the temp and the weather description.
+          res.write(`<p>The weather is currently ${weatherDescription}.</p><h1>The tempature in Lodnon is ${temp} degrees Celcious.</h1>`);
+          res.write("I don't like the UK weather as its often cold and gray.");
+          // Send back to the browser an image element that will display the image URL.
+          res.write("<img src=" + imageURL +">");
           res.send();
       })
   })
