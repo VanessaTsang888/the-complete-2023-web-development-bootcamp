@@ -26,7 +26,9 @@ app.get("/", function (req, res) {
         // Get the piece of data we want
         const weatherDescription =
           weatherData.weather[0].weather[0].description;
-          res.send("The tempature in Lodnon is " + temp + "degrees Celcious.");
+          res.write(`<h1>"The tempature in Lodnon is " + ${temp} + "degrees Celcious,"</h1>
+          <p>The weather is currently ${weatherDescription}</p>`);
+          res.send();
       })
   })
 
