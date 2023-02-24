@@ -40,12 +40,10 @@ app.post("/", function(req, res) {
             res.write("<img src=" + imageURL + ">");
 
       res.write(
-        "<p>I created my own API key from my acc on the OpenWeatherMap website.</p>"
-      );
-      res.write("<small>Then I used my key to develop this weather web app. I used Node.js and the Express framework to develop this app.</small>"
+        "<p><small>With this weather web app you can find the current weather condition for any city in the world.</small></p>"
       );
       res.write(
-        "<p><small> To run this app locally use this cmd: `nodemon app.js`</small></p>"
+        "<p><small> Resource: <a href='https://openweathermap.org/api'> Open Weather Map</a></small></p>"
       );
 
       // Send back to the browser an image element that will display the image URL.
