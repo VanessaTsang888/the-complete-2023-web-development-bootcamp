@@ -35,7 +35,10 @@ app.post("/", function(req, res) {
       const imageURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
       // Using template literal to printout the plain text with dynamic data on to the screen. Send the temp and the weather description.
       res.write(
-        `<p>The weather is currently ${weatherDescription}.</p><h1>The tempature in ${query} is ${temp} degrees celsius.</h1>`
+        `<p><strong>The weather is currently ${weatherDescription}.</strong></p>`
+      );
+      res.write(
+        `<h1>The tempature in <em style="color:red;"> ${query} </em> is ${temp} degrees celsius.</h1>`
       );
             res.write("<img src=" + imageURL + ">");
 
@@ -43,7 +46,7 @@ app.post("/", function(req, res) {
         "<p><small>With this weather web app you can find the current weather condition for any city in the world.</small></p>"
       );
       res.write(
-        "<p><small> Resource: <a href='https://openweathermap.org/api'> Open Weather Map</a></small></p>"
+        "<p><small> <strong>Resource</strong>: I generated the API used in this app from the <a href='https://openweathermap.org/api'> Open Weather Map</a></small></p>"
       );
 
       // Send back to the browser an image element that will display the image URL.
