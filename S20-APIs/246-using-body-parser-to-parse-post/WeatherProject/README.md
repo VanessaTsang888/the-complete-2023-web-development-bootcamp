@@ -35,7 +35,7 @@ As part of section 20, I develop a Weather web app for a user to input a city to
 - Run `npm i` to install dependencies
 - Run `nodemon app.js` to start the development server 
 
-### Resourcess
+### Resources
 
 - [Open Weather Map official website](https://openweathermap.org/api)
 - I had registered for my own account on this website to generate my own API Key. Then I used this key in the app.js code file which is the Node Server.
@@ -43,7 +43,10 @@ As part of section 20, I develop a Weather web app for a user to input a city to
 
 All my code files for all the Node.js sections has been pushed to my [GitHub](https://github.com/VanessaTsang888/the-complete-2023-web-development-bootcamp/tree/dev)
 
-
-#### Next Up
-In the future I hope to host this web app using GitHub pages so that my team member can use the web app and leave me feedback on my GitHub in the form of code review.
+### Quick Wins
+These are improvements to the web app that I set to achieve after I have complete app by following the course instructor.
+1. Code comments: write my own code comments to state the the logic for each block of code.
+2. Code improvements: refactor my code to make my app more effient whilst still adhereing to the best practices.
+3. Add more content to the app to state that i used a third party API and provide the resource to that.
+4. Hosting: find an open source hosting platform and host this dynamic web app. Then provide the link to my team members and ask them for feedback.
 
