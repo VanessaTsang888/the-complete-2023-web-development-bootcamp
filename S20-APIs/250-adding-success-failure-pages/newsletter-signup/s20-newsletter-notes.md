@@ -75,8 +75,23 @@ We need to develop a HTML page that has a signup form on it. To cut dwon on fron
 - Replace the Bootstrap brand logo to our own logo. Create new directory public and image and save our new logl inside the image directory or folder. Update the image element so that the source is refering to our new logo: `images/appBrewery-logo.png`.
 - Update the text within the various elements such as the <h1> to state: Signup to My Newsletter.
 - Change the input fields so we have First Name, Last Name and Email Address.
-- Delete some of the elements that we don't need such has some of the inputs and the checkbox.
+- Delete some of the elements that we don't need such has some of the inputs and the checkbox- In the sytles.css file, tidy up the styles for the three input fields.
+- To make our app from a static page to a dynamic page, we need to set up the GET() method for our home route. Setup uor the get route to our signup page to test it on the browser at localhost:3000.
+
+When we start a project its normal to use both express.js and body parser. Therefore, keep a copy of this **boiler plate code** or snipet of codes and use it for every new project.
+
+```js
+// jshint esversion: 6
+const express = require("express");
+const bodyParser = require("body-parser");
+const request = require("request");
+const https = require("https"); 
+
+const app = express();
+app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: true }));
+```
 
 ## 249. Posting Data to Mailchimp's Servers via their API:
 
-xxx
+Written code comments within the app.js file. Will tidy that up right at the end.
