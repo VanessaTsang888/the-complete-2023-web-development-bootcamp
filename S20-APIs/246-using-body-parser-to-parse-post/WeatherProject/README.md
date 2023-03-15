@@ -1,15 +1,13 @@
-# Node.js Training
+# Node.js Training - Weather Web Application
 
 For my Node.js training I used three of the sections from [The Complete 2023 Web Development Bootcamp Udemy training course](https://www.udemy.com/course/the-complete-web-development-bootcamp/)
 
-**Sections Used**  
+As part of my Node.js training I had developed a website application that allows a user to input a city name to return the weather condition for that location. This is a dynamic single page web application that uses Node.js with the framework Express.js.
 
-1. Section 18: Node.js
-2. Section 19: Express.js with Node.js
-3. Section 20: APIs - Application Programming Interfaces.
+## Sections and Lectures
+As part of section 20 of this Udemy training course, I develop a Weather web app using a third party API from the [Open Weather Map website](https://openweathermap.org/api) which is the external server that responses to my server (app.js) via the API that I've written into the entery of my web application called app.js.
 
-## Weather Web App
-As part of section 20, I develop a Weather web app for a user to input a city to find the weather condition for that city. The lectures I used to develop this dynamic and interactive Node.js app are:
+The lectures I used to develop this dynamic and interactive Node.js app are:
 
 - 239. Why Do We Need APIs?
 - 240. API Endpoints, Paths and Parameters.
@@ -26,7 +24,6 @@ As part of section 20, I develop a Weather web app for a user to input a city to
 - [Express](https://expressjs.com/)
 - [Nodemon](https://nodemon.io/)
 - [Body Parser](https://www.npmjs.com/package/body-parser)
-
 
 ### Getting Started
 
@@ -45,8 +42,8 @@ All my code files for all the Node.js sections has been pushed to my [GitHub](ht
 
 ### Quick Wins
 These are improvements to the web app that I set to achieve after I have complete app by following the course instructor.
-1. Code comments: write my own code comments to state the the logic for each block of code.
+1. Code comments: write my own code comments to state the the logic for each block of code to demonstrate my understanding of server-side/backend development with Node.js and Express.js.
 2. Code improvements: refactor my code to make my app more effient whilst still adhereing to the best practices.
-3. Add more content to the app to state that i used a third party API and provide the resource to that.
+3. Add more content to the app to state that I used a third party API and provide the resource to that.
 4. Hosting: find an open source hosting platform and host this dynamic web app. Then provide the link to my team members and ask them for feedback.
 
