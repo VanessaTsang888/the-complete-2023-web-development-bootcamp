@@ -40,10 +40,23 @@ The lectures I used to develop this dynamic and interactive Node.js app are:
 
 All my code files for all the Node.js sections has been pushed to my [GitHub](https://github.com/VanessaTsang888/the-complete-2023-web-development-bootcamp/tree/dev)
 
-### Quick Wins
+## Quick Wins
 These are improvements to the web app that I set to achieve after I have complete app by following the course instructor.
 1. Code comments: write my own code comments to state the the logic for each block of code to demonstrate my understanding of server-side/backend development with Node.js and Express.js.
 2. Code improvements: refactor my code to make my app more effient whilst still adhereing to the best practices.
 3. Add more content to the app to state that I used a third party API and provide the resource to that.
 4. Hosting: find an open source hosting platform and host this dynamic web app. Then provide the link to my team members and ask them for feedback.
 
+### Code Comments
+My code comments written is important it helps me understand the code I've written in terms of the various concepts for Node.js language and for me to use this as a resource within my future Node.js with Express projects. Also, my code comments helps my team members gage the level of my backend development using Node.js and Express.js. Therefore, taking the time to write sound code comments is a benefit to my career as a Javascript Developer rather than only focus on frontend development in the long run.
+
+### Code Improvements
+Making various types of code improvements by refactoring my code shows my ambition to keep up with the latest version of Javascript ES6 since Node.js is based on the Javascript language which I believe is best practice in software engineering today.
+1. Refactor any ES5 code to use ES6 code including change the string concatination to use template literal which will also improve the performance of this web app.
+2. Refactor the 'query' within the URL to something that makes more sense such as 'nameOfCity' since this will be easier for others to understand.
+
+### Third Party API
+To be transparant I need to make it clear that I had used an  API from someone eles server to get response/data to post into my server via the API I've written into my app.js file. I didn't develop the API myself as the objective of this project is to learn to use Node.js and Express.js for backend development. This is why I have developed new content to state state this and sent it to the browser.
+
+### Hosting
+To make it easier to my colleagues/ex-colleagues (whom are experienced developers) to test this web app and provide me with constructive feedback, I will look for an open source hosting platform and actually host this app.
