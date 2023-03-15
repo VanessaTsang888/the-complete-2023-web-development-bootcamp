@@ -25,10 +25,10 @@ body {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-
+/* margin-bottom property: Remove the shadow on the bottom of the middle input field. */
 .middle {
   border-radius: 0;
-  margin-bottom: -1px;
+  margin-bottom: -1px; 
 }
 
 .bottom {
