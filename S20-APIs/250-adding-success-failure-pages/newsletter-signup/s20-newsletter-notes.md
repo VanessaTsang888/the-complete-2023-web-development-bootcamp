@@ -116,3 +116,7 @@ Use the Bootstrap Jumbotron code in failure page and edit it. Copy the Bootstrap
 **Try Again Button**
 Large yellow btn to navigate user back to the Signup page so they can try again. This button will use Bootstrap class of: btn btn-lg btn-warning
 
+
+## 251. Deploying Your Server with Heroku:
+Can't follow this lecture since Heroku is no longer free to host dynamic sites.
+
