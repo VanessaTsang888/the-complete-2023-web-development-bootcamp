@@ -16,11 +16,11 @@ app.use(express.static("public"));
 // Use url encoded func of the body parser, set extended to true. this func is a built-in middleware function in Express. It parses incoming requests with urlencoded payloads and is based on body-parser.
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Setup GET method for home route which is our signup page to test it on browser at localhost:3000.
+// Setup GET method for home route (signup page) to test it on browser at localhost:3000.
 // This callback func routes the HTTPS Get Request to the path which is being specified with the callback func.
-// Deliver the file at the current directory name plus the string with location of our html file inside.
+// Deliver the file at the current directory name plus the string with location of our html file inside (relative path).
 // When we request the home route from our server, then it should deviver the file at that directory.
-// Send or transfer this html file as it contains the data entered by user and we need to save this data, then post the sucsess or failure page.
+// Send/transfer this html file as it contains the data entered by user and we need to save this data, then post the sucsess or failure page.
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/signup.html");
 });
@@ -28,11 +28,11 @@ app.get("/", function (req, res) {
 // Send post request to our home route. Use body-parser to get the data from the signup form, and log it.
 // Pull up the values of those things inside our form.
 app.post("/", function(req, res) {
-  const firstName = req.body.fName; // Store value on the right into variable on left we just declared. fName is the name of our input in html file.
+  const firstName = req.body.fName; // Store value on the right into variable on left. fName is the name of our input in html file.
   const lastName = req.body.lName;
   const email = req.body.email;
 
-  // Create our own data object as 3D JSON. Create our key-value-pairs with keys that Mailchip will reconise (see Mailchimp site) such as FNAME - known as merge fields to Mailchimp.
+  // Create our own data object as 3D JSON. Create our key-value-pairs with keys that Mailchip will reconise (see Mailchimp site) such as FNAME, known as merge fields to Mailchimp.
   // members key-value-pairs is from on Mailchimp site. Send this data to Mailchimp.
   const data = {
     members: [
@@ -51,21 +51,21 @@ app.post("/", function(req, res) {
   const jsonData = JSON.stringify(data);
 
   // My list id (also known as the Endpoint) is the last part of this api which I generated from my MailChimp Developer account.
-  // URL will come from the main Mailchimp api endpoint. Then after the forward slash its my list id/endpoint. Subscribe my members in to this list.
+  // URL will come from the main Mailchimp api endpoint. Then after the last forward slash its my list id/endpoint. Subscribe my members into this list.
   const url = 'https://us18.api.mailchimp.com/3.0/lists/c84cb44d41';
 
-  // Create some options. We can use anything as our UN (I used: van8), the PW MUST to be our api key.
-  // I think api key is the Endpoint? auth: Authentication. The region of us18 matches with the region in my url.
+  // Create some options. We can use anything as our UN (I used: van8), the PW MUST to be our api key (after UN and colon).
+  // I think api key is the Endpoint? auth is: Authentication. The region of us18 matches with the region in my url.
   const options = {
     method: 'POST',
     auth: 'van8:a78e6c2ffab169efa158758d9e612f62-us18', // van8 is my username. The api key (generated from my account in MailChimp) is the PW.
   };
 
-// Make our request using the HTTPS standard req method to POST data to external resource.
+// Make our request using the HTTPS standard req method to POST data to external resource > Mailchimp.
 // Save our req in a variable so we can then send it over to Mailchimp server by calling request.write() later.
   const request = https.request(url, options, function (response) {
-    // Do a check by using a conditional: If the error code in the Express response object is 200 then execute the code within the
-    //  body of that clause. Otherwise, execute the code within the body of the else clause.
+    // Do a check by using a conditional: If the error code in the Express response object is same as 200, then execute the code within the
+    // body of that clause. Otherwise, execute the code within the body of the else clause.
     if (response.statusCode === 200) {
       res.sendFile(__dirname + '/success.html'); // Use the sendFile method from the response object to deliver this html file with Express.js
     } else {
@@ -76,19 +76,19 @@ app.post("/", function(req, res) {
       console.log(JSON.parse(data)); // which error code logged out?
     });
   });
-  // Use the request variable/object (with the https.request() func stored inside of it) to call request.write() func on it, pass in the JSON data
-  // to the Mailchimp server. To specify that we're done with the request, we call request.end() func. Now a new member should be added.
-  // Go to my Mailchimp account > Audience > here I should have a new contact with the user's details they've submitted in the UI. 
+  // Use the request object (with the https.request() func stored inside of it) to call write() func on it, pass in the JSON data
+  // to the Mailchimp server. To specify that we're done with the request, we call end() func on the req object. Now a new member should be added - check our Mailchimp account.
+  // Go to my Mailchimp account > Audience > here I should have a new contact with the user's details they've submitted in the form on the UI. 
   request.write(jsonData);
   request.end();
 });
-// User has reached the failure page and want to go back to the signup page and try again.
-// The failure route. redirect user to the home route - the Signup page. This triggers the app.get() method above.
+// User has reached the failure page and want to go back to the signup page to try again.
+// The failure route. Redirect user to the home route/the Signup page. This triggers the app.get() method above.
 app.post("/failure", function (req, res) {
-  res.redirect("/"); // Path to the Home route - the signup page.
+  res.redirect("/"); // Path to the Home route/the signup page. Redirect to here.
 });
 
-// setup server to listen on port 3000. Localhost:3000
+// Setup server to listen on port 3000. Localhost:3000
 // Logout a plain string text within the body of this code block.
 app.listen(3000, function () {
   console.log("Server is running on port 3000"); // Testing > inspect the UI > Console tab: error 404 as Milchip has frozen my account until I submit my ID to them but since this project is for training I'm not really happy to do so.
