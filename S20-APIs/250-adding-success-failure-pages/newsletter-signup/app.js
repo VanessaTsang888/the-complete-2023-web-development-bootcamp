@@ -60,18 +60,19 @@ app.post("/", function(req, res) {
     auth: 'van8:a78e6c2ffab169efa158758d9e612f62-us18', // van8 is my username. The api key (generated from my account in MailChimp) is the PW.
   };
 
-  // Make our request using the HTTPS standard req method to POST data to external resource.
+// Make our request using the HTTPS standard req method to POST data to external resource.
 // Save our req in a variable so we can then send it over to Mailchimp server by calling request.write() later.
   const request = https.request(url, options, function (response) {
-    // Check if Error code is 200 or something else?
+    // Do a check by using a conditional: If the error code in the Express response object is 200 then execute the code within the
+    //  body of that clause. Otherwise, execute the code within the body of the else clause.
     if (response.statusCode === 200) {
-      res.sendFile(__dirname + '/success.html');
+      res.sendFile(__dirname + '/success.html'); // Use the sendFile method from the response object to deliver this html file with Express.js
     } else {
       res.sendFile(__dirname + '/failure.html');
     }
     // When we get back a response, we going to Check what data they sent us. Parse the data and logout so we can see the data in the terminal/inspect the UI.
     response.on('data', function (data) {
-      console.log(JSON.parse(data));
+      console.log(JSON.parse(data)); // which error code logged out?
     });
   });
   // Use the request variable/object (with the https.request() func stored inside of it) to call request.write() func on it, pass in the JSON data
@@ -80,10 +81,10 @@ app.post("/", function(req, res) {
   request.write(jsonData);
   request.end();
 });
-
-// The failure route, redirect user to the home route. This triggers the app.get() method above.
+// User has reached the failure page and want to go back to the signup page and try again.
+// The failure route. redirect user to the home route - the Signup page. This triggers the app.get() method above.
 app.post("/failure", function (req, res) {
-  res.redirect("/");
+  res.redirect("/"); // Path to the Home route - the signup page.
 });
 
 // setup server to listen on port 3000. Localhost:3000

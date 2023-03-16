@@ -95,3 +95,24 @@ app.use(bodyParser.urlencoded({ extended: true }));
 ## 249. Posting Data to Mailchimp's Servers via their API:
 
 Written code comments within the app.js file. Will tidy that up right at the end.
+
+## 250. Adding Success and Failure Pages:
+**The Problem**
+Once user has submitted there details they should be navigated to either the success or failure page. 
+
+How can we figure out what response code we got back after making this HTTPS request? If response code is 200 it means ok, so we can send user our success page. Otherwise, the response is a different code, we going to send them the faure page.
+
+**The Solution**
+Use an if-else conditional statement to evaluate a condition such as:
+if the error code is xxxx, then execute the oporation in the body of this if-clause. Otherwise execute the operation within the else clause.
+
+### Bootstrap
+Use a CSS framework called Bootstrap to help us develop our success and failure pages to save us time on the frontend development work.
+
+[Bootstrap Jumbotron-style component](https://getbootstrap.com/docs/5.3/examples/jumbotron/)
+
+Use the Bootstrap Jumbotron code in failure page and edit it. Copy the Bootstrap custom CSS stylesheet from the signup.html and past in failure and success pages. 
+
+**Try Again Button**
+Large yellow btn to navigate user back to the Signup page so they can try again. This button will use Bootstrap class of: btn btn-lg btn-warning
+

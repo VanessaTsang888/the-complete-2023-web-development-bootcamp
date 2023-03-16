@@ -20,7 +20,9 @@
           There was a problem signing you up. Please try again or contact the
           developer.
         </p>
-        <!-- Large yellow btn -->
+        <!-- Large yellow btn to navigate user back to the Signup page so they can try again. -->
+        <!-- When user click the Try Again button, the post request will get triggered to the failure route and that is going to be caught by our server over in our server > the app.post("/failure", function()) > redirect to the home route  -->
+        <!-- Which then triggers the app.get() func and it sends the signup page as the file to be rendered on screen. -->
         <form action="/failure" method="post">
           <button class="btn btn-lg btn-warning" type="submit" name="button">
             Try Again

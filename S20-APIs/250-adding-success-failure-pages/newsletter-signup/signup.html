@@ -110,7 +110,8 @@
   </head>
   <body class="text-center">
     <main class="form-signin w-100 m-auto">
-      <!-- Post user's input to the home route location so our server can pick it up  -->
+      <!-- Post user's input to the home route location so our server can pick it up. The Signup btn will not work without this method attribute of POST. -->
+      <!-- action attribute is the location we are going to send our post request to, which is going to be the home route so we can pick it up from here. -->
       <form action="/" class="form-signin" method="POST">
         <img
           class="mb-4"
