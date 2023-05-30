@@ -50,6 +50,7 @@ app.post("/", function (req, res) {
 
   // Make our request using the HTTPS standard req method to POST data to external resource.
   // Get a resp from the Mailchimp server. https://nodejs.org/api/https.html#https_https_request_url_options_callback
+  // Save our req in a const and then later we use that const req to send things over to the MailChimp server server by request.write()
   const request = https.request(url, options, function (response) {
     response.on("data", function (data) {
       console.log(JSON.parse(data));

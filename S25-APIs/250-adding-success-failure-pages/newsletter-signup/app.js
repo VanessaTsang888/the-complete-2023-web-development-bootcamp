@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
 const https = require('https');
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const app = express();
 app.use(express.static('public'));
@@ -37,7 +38,9 @@ app.post('/', function (req, res) {
   const jsonData = JSON.stringify(data);
   const url = 'https://us18.api.mailchimp.com/3.0/lists/c84cb44d41';
 
-  // create some options. We can use anything as our UN but the PW has to be our api key.
+  // Create some options. We can use anything as our UN but the PW has to be our api key.
+  // members key-value-pairs is from on Mailchimp site. Send this data to Mailchimp.
+
   const options = {
     method: 'POST',
     auth: 'van8:a78e6c2ffab169efa158758d9e612f62-us18',
